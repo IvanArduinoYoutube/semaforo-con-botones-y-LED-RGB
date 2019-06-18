@@ -1,0 +1,56 @@
+//declaramos las variables
+int boton3 = 10;
+int boton2 = 9;
+int boton1 = 8;
+int pinblue = 7;
+int pingreen = 6;
+int pinred = 5;
+//creamos variables booleanas, es decir adquiere un valor de 0 o de 1
+bool boton_3;
+bool boton_2;
+bool boton_1;
+
+//declaramos el estado de cada variable
+void setup() {
+  pinMode(boton3, INPUT);
+  pinMode(boton2, INPUT);
+  pinMode(boton1, INPUT);
+  pinMode(pinblue, OUTPUT);
+  pinMode(pingreen, OUTPUT);
+  pinMode(pinred, OUTPUT);
+
+}
+
+void loop() {
+  //asignamos a las variables booleanas las lecturas digitales de los botones
+  boton_3 = digitalRead(boton3);
+  boton_2 = digitalRead(boton2);
+  boton_1 = digitalRead(boton1);
+
+//en esta parte decimos que si un determinado boton esta pulsado se encienda un color del led RGB
+  if (boton_3) {
+    digitalWrite(pinblue, HIGH);
+  }
+  else {
+    digitalWrite(pinblue, LOW);
+  }
+  
+  
+  if (boton_2) {
+    digitalWrite(pingreen, HIGH);
+  }
+  else {
+    digitalWrite(pingreen, LOW);
+  } 
+  
+  
+  if (boton_1) {
+    digitalWrite(pinred, HIGH);
+  }
+  else {
+    digitalWrite(pinred, LOW);
+  }
+
+//codigo bastante sencillo y facil de entender, si alguien tiene alguna sugerencia de proyecto
+//que la deje en los comentarios, lo leeré ;).
+}
